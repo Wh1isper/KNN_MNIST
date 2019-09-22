@@ -2,7 +2,7 @@
 
 别问，问就python train.py
 
-rnn.py是rnn分类器，用np矩阵运算写成，每次预测一个
+knn.py是knn分类器，用np矩阵运算写成，每次预测一个
 
 utils.py是文件读取功能
 
