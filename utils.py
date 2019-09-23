@@ -51,3 +51,14 @@ def load():
     test_images = load_images(filename_test_images)
     test_labels = load_labels(filename_test_labels)
     return train_images,train_labels,test_images,test_labels
+
+def binary(images):
+    for image in images:
+        count = 0
+        for pix in image:
+            if pix>127:
+                image[count] = 1
+            else:
+                image[count] = 0
+            count += 1
+    return images
