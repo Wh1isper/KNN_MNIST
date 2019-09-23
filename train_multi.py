@@ -1,4 +1,4 @@
-from rnn import classify
+from knn import classify
 from utils import load
 import numpy as np
 from tqdm import tqdm
