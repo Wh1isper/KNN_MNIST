@@ -1,6 +1,6 @@
 # KNN_MNIST
 
-别问，问就python train.py
+别问，问就python train_multi.py
 
 knn.py是knn分类器，用np矩阵运算写成，每次预测一个
 
