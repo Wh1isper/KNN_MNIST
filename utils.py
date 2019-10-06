@@ -62,3 +62,29 @@ def binary(images):
                 image[count] = 0
             count += 1
     return images
+
+def remove(removeList):
+    train_images, train_labels, test_images, test_labels = load()
+    new_train_images = []
+    new_train_labels = []
+    new_test_images = []
+    new_test_labels = []
+    for i in range(len(train_labels)):
+        if train_labels[i] in removeList:
+            pass
+        else:
+            new_train_images.append(train_images[i])
+            new_train_labels.append(train_labels[i])
+
+    for i in range(len(test_labels)):
+        if test_labels[i] in removeList:
+            pass
+        else:
+            new_test_images.append(test_images[i])
+            new_test_labels.append(test_labels[i])
+    new_train_images = np.array(new_train_images)
+    new_train_labels = np.array(new_train_labels)
+    new_test_images = np.array(new_test_images)
+    new_test_labels = np.array(new_test_labels)
+
+    return new_train_images, new_train_labels, new_test_images, new_test_labels
